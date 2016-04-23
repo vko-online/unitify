@@ -27,7 +27,10 @@ newValue.vmax.toFixed(3);
 //=> "44.776"
 ```
 
-Values converted between commonly used unit measures.
+Values converted between commonly used unit measures. Behind the scenes uses `document viewPort` size for `vh, vw, vmin, vmax` units.
+
+Supported units
+> px, vh, in, pc, pt, vh, vmax, vmin, vw
 
 
 ## API
