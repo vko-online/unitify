@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ bower install --save unitify
+$ bower install --save css-unitify
 ```
 
 
