@@ -1,0 +1,33 @@
+{
+  "name": "unitify",
+  "description": "Convert CSS measurement units",
+  "main": "index.js",
+  "authors": [
+    "Medet Tleukabiluly"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "convert",
+    "vmin",
+    "vmax",
+    "%",
+    "vh",
+    "vw",
+    "px",
+    "in",
+    "pt",
+    "pc",
+    "cm",
+    "mm"
+  ],
+  "homepage": "https://github.com/vko-online/unitify",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ]
+}

@@ -1,62 +1,50 @@
-# round-to [![Build Status](https://travis-ci.org/sindresorhus/round-to.svg?branch=master)](https://travis-ci.org/sindresorhus/round-to)
+# unitify
 
-> Round a number to a specific number of decimal places: `1.234` → `1.2`
+> Convert CSS units: `120px` → `37vh, 1.25in, 7.5pc, 90pt, 35.08vh, 7.16vmax, 35.08vmin, 7.16vw`
 
 
 ## Install
 
 ```
-$ npm install --save round-to
+$ bower install --save unitify
 ```
 
 
 ## Usage
 
 ```js
-var roundTo = require('round-to');
 
-roundTo(1.234, 2);
-//=> 1.23
+unitify(120)
+//=> {"raw":120,"vmin":35.08771929824562,"vmax":7.164179104477612,"vh":35.08771929824562,"vw":7.164179104477612,"in":1.25,"pt":90,"pc":7.5}
 
-roundTo.up(1.234, 2);
-//=> 1.24
 
-roundTo.down(1.234, 2);
-//=> 1.23
+unitify('100vw')
+//=> {"raw":100,"px":"1675px","vmin":489.766081871345,"vmax":100,"vh":489.766081871345,"in":17.447916666666668,"pt":1256.25,"pc":104.6875}
+
+var newValue = unitify('1000pt');
+//=> {"raw":1000,"px":"750px","vmin":219.2982456140351,"vmax":44.776119402985074,"vw":44.776119402985074,"vh":219.2982456140351,"in":7.8125,"pc":46.875}
+newValue.vmax.toFixed(3);
+//=> "44.776"
 ```
 
-Numbers are rounded to a specific number of significant figures. Specifying a negative precision will round to any number of places to the left of the decimal.
+Values converted between commonly used unit measures.
 
-```js
-roundTo(1234.56, -2);
-//=> 1200
-```
 
 ## API
 
-### roundTo(value, precision)
+### unitify(value)
 
-Round the decimals with [`Math.round`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round).
-
-### roundTo.up(value, precision)
-
-Round up the decimals with [`Math.ceil`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil).
-
-### roundTo.down(value, precision)
-
-Round down the decimals with [`Math.floor`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor).
+Convert values between unit measures from http://www.w3schools.com/cssref/css_units.asp
 
 #### value
 
-Type: `number`
+Type: `number|string`
 
-#### precision
+## Contribution
 
-Type: `number` (integer)
-
-Number of decimal places.
+Very open for contributions.
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Medet Tleukabiluly](http://github.com/vko-online)
