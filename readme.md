@@ -14,7 +14,7 @@ $ bower install --save css-unitify
 
 ```js
 
-unitify(120) (120 === '120px' for numbers)
+unitify(120) // same as unitify('120px')
 //=> {"raw":120,"vmin":35.08771929824562,"vmax":7.164179104477612,"vh":35.08771929824562,"vw":7.164179104477612,"in":1.25,"pt":90,"pc":7.5}
 
 
